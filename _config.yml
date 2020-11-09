@@ -1,0 +1,39 @@
+repository: 54312795/54312795.github.io 
+repository_url: https://github.com/54312795/54312795.github.io
+
+timezone: Asia/Shanghai
+lang: zh_CN
+
+title: 四维导航  
+alias_en: 
+alias_cn: 四维导航
+description: A Navigation Website for 四维先森 
+keywords: 四维导航, 四维先森, TonLX, 汤龙祥, Navi, Navigation
+url: https://tonlx.cn
+established_at: "2016-10-01T00:00+08:00"
+
+author: iROCKBUNNY
+author_url: https://irockbunny.com
+organization: TEELAB
+organization_url: https://teelab.net
+contact: contact[at]irockbunny[dot]com
+
+image: /images/logo.png
+logo: /images/logo.png
+logo_dark: /images/logo-dark.svg
+logo_white: /images/logo-white.svg
+
+plugins:
+- jekyll-seo-tag
+- jekyll-sitemap
+
+exclude:
+- .gitignore
+- .travis.yml
+- LICENSE
+- README.md
+- CNAME
+- Gemfile
+- Gemfile.lock
+- script
+- vendor

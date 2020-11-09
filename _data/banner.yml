@@ -1,0 +1,17 @@
+message:
+  show: true
+  hitokoto: true
+  content: 举国同庆 月满中秋
+  detail: System Operator
+  color: black
+  icon: birthday cake
+  image: false
+  link: false
+
+advertisement:
+  show: true
+  content: 学术精进 系统构建20K词汇体系
+  detail: 云英语VB词汇建造师
+  color: black
+  icon: university
+  link: https://y-english.cn/
