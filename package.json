@@ -1,0 +1,40 @@
+{
+  "name": "shuang",
+  "version": "5.10.0",
+  "description": "帮助你快速上手双拼输入法",
+  "scripts": {
+    "clear": "rm -rf build/*",
+    "rename": "mv build/app.js build/app.min.js && for i in build/**/*.js;do mv \"$i\" \"${i%.js}.min.js\";done",
+    "build:js": "npx babel src/app.js -d build && npx babel src/scheme -d build/scheme",
+    "build:css": "npx cleancss src/style.css -o build/style.min.css",
+    "build:html": "npx html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true index.src.html -o index.html",
+    "build:src": "npm run build:js && npm run build:css && npm run build:html",
+    "debug": "rm -rf build && npm run build:app && cp -r src build && npm run rename && npm run build:css && npm run build:html",
+    "build": "npm run build:app && npm run clear && npm run build:src && npm run rename",
+    "build:app": "scripts/build-app.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueSky-07/Shuang.git"
+  },
+  "keywords": [
+    "双拼",
+    "练习"
+  ],
+  "author": "BlueSky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BlueSky-07/Shuang/issues"
+  },
+  "homepage": "https://api.ihint.me/shuang",
+  "devDependencies": {
+    "@babel/cli": "^7",
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "babel-preset-minify": "^0.5.1",
+    "clean-css-cli": "^4.3.0",
+    "html-minifier": "^4.0.0"
+  },
+  "dependencies": {
+  }
+}
